@@ -21,19 +21,23 @@ public class VowelCounter {
         int nVowels = 0;
         int nSpaces = 0;
         int nOther = 0;
+        int length;
         // -------------------------------------------------------------- INPUT
         university = JOptionPane.showInputDialog("Enter university name");
         // --------------------------------------------------------- PROCESSING
-
-
-
-
-
-
-
-
-
-
+        length = university.length();
+        for (i = 0; i < length; i++) {
+            char ch = university.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                nVowels++;
+            }
+            else if (ch == ' ') {
+                nSpaces++;
+            }
+            else {
+                nOther++;
+            }
+        }
         // ------------------------------------------------------------- OUTPUT
         System.out.printf("%s has\n\t%d vowels, %d spaces, %d other chars\n",
                 university, nVowels, nSpaces, nOther);
