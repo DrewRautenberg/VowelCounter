@@ -17,7 +17,7 @@ public class VowelCounter {
 
         // ---------------------------------------------- VARIABLE DECLARATIONS
         String university;
-        int i = 0;
+        int i;
         int nVowels = 0;
         int nSpaces = 0;
         int nOther = 0;
